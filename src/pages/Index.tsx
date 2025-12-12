@@ -87,7 +87,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <div className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-semibold border border-primary/30">
-                🔥 Более 1000 игроков онлайн
+                🔥 Более 5+ игроков онлайн
               </div>
               
               <h1 className="text-5xl md:text-6xl font-black leading-tight">
@@ -249,7 +249,7 @@ const Index = () => {
 
               <div className="flex justify-center gap-8 pt-8 flex-wrap">
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">1000+</div>
+                  <div className="text-3xl font-bold gradient-text">5+</div>
                   <div className="text-sm text-muted-foreground">Игроков онлайн</div>
                 </div>
                 <div className="text-center">
@@ -257,7 +257,7 @@ const Index = () => {
                   <div className="text-sm text-muted-foreground">Работа сервера</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">15+</div>
+                  <div className="text-3xl font-bold gradient-text">7+</div>
                   <div className="text-sm text-muted-foreground">Фракций</div>
                 </div>
               </div>
@@ -278,16 +278,26 @@ const Index = () => {
 
               <div className="flex gap-6 text-sm text-muted-foreground">
                 <a href="#" className="hover:text-primary transition-colors">Правила</a>
-                <a href="#" className="hover:text-primary transition-colors">Discord</a>
-                <a href="#" className="hover:text-primary transition-colors">VK Группа</a>
+                <a href="https://discord.gg/YuM4aKjXDG" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Discord</a>
+                <a href="https://vk.com/krproblox?from=groups" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">VK Группа</a>
                 <a href="#" className="hover:text-primary transition-colors">Донат</a>
               </div>
 
               <div className="flex gap-4">
-                <Button size="icon" variant="ghost" className="hover:bg-primary/20">
+                <Button 
+                  size="icon" 
+                  variant="ghost" 
+                  className="hover:bg-primary/20"
+                  onClick={() => window.open('https://discord.gg/YuM4aKjXDG', '_blank')}
+                >
                   <Icon name="MessageCircle" size={20} />
                 </Button>
-                <Button size="icon" variant="ghost" className="hover:bg-primary/20">
+                <Button 
+                  size="icon" 
+                  variant="ghost" 
+                  className="hover:bg-primary/20"
+                  onClick={() => window.open('https://vk.com/krproblox?from=groups', '_blank')}
+                >
                   <Icon name="Users" size={20} />
                 </Button>
               </div>
