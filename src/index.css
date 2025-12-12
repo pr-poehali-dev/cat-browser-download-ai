@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
+    --background: 220 25% 12%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 14%;
+    --card: 220 25% 16%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 14%;
+    --popover: 220 25% 16%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 262 83% 58%;
+    --primary: 0 72% 51%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 199 89% 48%;
+    --secondary: 217 91% 60%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 222 47% 20%;
+    --muted: 220 25% 20%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 262 83% 58%;
+    --accent: 0 72% 51%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 47% 20%;
-    --input: 222 47% 20%;
-    --ring: 262 83% 58%;
+    --border: 220 25% 25%;
+    --input: 220 25% 25%;
+    --ring: 0 72% 51%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 222 47% 11%;
+    --sidebar-background: 220 25% 12%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary: 0 72% 51%;
     --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 222 47% 14%;
+    --sidebar-accent: 220 25% 16%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 47% 20%;
-    --sidebar-ring: 262 83% 58%;
+    --sidebar-border: 220 25% 25%;
+    --sidebar-ring: 0 72% 51%;
   }
 }
 
@@ -78,6 +78,10 @@
     @apply backdrop-blur-xl bg-card/30 border border-border/50;
   }
 
+  .game-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-all duration-300;
+  }
+
   @keyframes gradient-shift {
     0%,
     100% {
@@ -100,5 +104,21 @@
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+    }
+    50% {
+      box-shadow:
+        0 0 40px rgba(220, 38, 38, 0.6),
+        0 0 60px rgba(59, 130, 246, 0.4);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
   }
 }
